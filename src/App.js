@@ -5,7 +5,10 @@ import Todo from './features/todo/Todo';
 
 function App() {
   return (
-    <><Todo /></>
+    <>
+      <Counter />
+      {/* <Todo /> */}
+    </>
   );
 }
 

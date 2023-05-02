@@ -4,7 +4,7 @@ import { addTodo, removeTodo } from './todoSlice';
 
 const Todo = () => {
     const [food, setFood] = useState("");
-    const { todos } = useSelector(state => state);
+    const { todos } = useSelector(state => state.todo);
     const dispatch = useDispatch();
     console.log(todos);
   return (

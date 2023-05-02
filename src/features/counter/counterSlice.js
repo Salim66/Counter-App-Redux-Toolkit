@@ -3,19 +3,21 @@ import { createSlice } from '@reduxjs/toolkit';
 // create counter slice
 export const counterSlice = createSlice({
     name: "counter",
-    initialState: 0,
+    initialState: {
+        count: 0
+    },
     reducers: {
         increment: (state, action) => {
-            return state += 1;
+            state.count = state.count + 1;
         },
         decrement: (state, action) => {
-            return state -= 1;
+            state.count = state.count - 1;
         },
         reset: (state, action) => {
-            return state = 0;
+            state.count = 0;
         },
         randNumber: (state, action) => {
-            return state = action.payload;
+            state.count = action.payload;
         },
     }
 });
